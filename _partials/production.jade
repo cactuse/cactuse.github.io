@@ -1,0 +1,20 @@
+section.production#production
+  .container
+    h2.section-title Creative Production
+
+    dl
+      for ad in public._data.production
+        dt.resume__item-summary
+         h3.resume__title #{ad.title}
+          p.resume__location #{ad.companyDescription}
+          p.resume__location #{ad.period}
+        dd.teaching__course
+          p !{ad.description}
+          if ad.tasks
+            ul.list-default
+              for task in ad.tasks
+                if task
+                  li.teaching__course-link--inactive= task
+          iframe(type='text/html' width='640' height='390' src='#{ad.link}?autoplay=1&origin=http://example.com' frameborder='0' margin-bottom='75px')
+          dd.advertising__course
+            p 

@@ -1,0 +1,18 @@
+doctype html
+html
+  != partial("_partials/head")
+  body
+    != partial("_partials/header")
+
+    main
+      section.about
+        .container
+          h2.section-title About
+          != yield
+      != partial("_partials/advertising")
+      != partial("_partials/awareness")
+      != partial("_partials/production")
+
+  != partial("_partials/footer")
+  != partial("_partials/scripts")
+    
